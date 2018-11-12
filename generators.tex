@@ -1,0 +1,313 @@
+\begin{longtable}{>{\raggedright\arraybackslash}Xcc|cc|rc|ccc}
+\multicolumn{5}{c}{} &
+\multicolumn{2}{c}{\sffamily Modifiers} &
+\multicolumn{3}{c}{\sffamily Requires}
+\\*
+\sffamily Name & 
+\sffamily Type & 
+\sffamily Mass / Rad &
+\multicolumn{2}{c}{\sffamily Generator} &
+\sffamily Thrust & \sffamily Fuel &
+\sffamily Reac. & \sffamily Gen. & \sffamily Cool
+\\*
+\endfirsthead
+
+\footnotesize \faChevronCircleLeft\ (from previous page)\\[1em]
+\multicolumn{5}{c}{} &
+\multicolumn{2}{c}{\sffamily Modifiers} &
+\multicolumn{3}{c}{\sffamily Requires}
+\\*
+\sffamily Name & 
+\sffamily Type & 
+\sffamily Mass / Rad &
+\multicolumn{2}{c}{\sffamily Generator} &
+\sffamily Thrust & \sffamily Fuel &
+\sffamily Reac. & \sffamily Gen. & \sffamily Cool
+\\*
+\midrule
+\endhead
+
+
+\multicolumn{10}{r}{\footnotesize (continued next page) \faChevronCircleRight} 
+\endfoot
+
+\bottomrule
+\endlastfoot
+
+\midrule
+\rowcolor{white}
+AMTEC thermoelectric & &
+1 / 6 & 
+& &
+& &
+\encircle{n} & & 1
+\\*
+\rowcolor{lightgray}
+JTEC H\textsubscript{2} Thermoelectric &
+\multirow{-2}{*}{\enhex{\sffamily \large{C}}} &
+1 / 4 &
+\multirow{-2}{*}{\large{\encircle{e}}} & \multirow{-2}{*}{\pulsegen{0.5}} &
+$+$\faSunO & &
+& &
+\\
+
+\midrule
+\rowcolor{white}
+Brayton turbine & &
+1 / 5 & 
+& \pulsegen{0.3} &
+& &
+(any) & & 2
+\\*
+\rowcolor{lightgray}
+O’Meara LSP paralens &
+\multirow{-2}{*}{\enhex{\sffamily \large{C}}} &
+0 / 3 &
+\multirow{-2}{*}{\large{\encircle{e}}} & &
+$+$\faSunO & \sfrac{1}{2} &
+& &
+\\
+
+\midrule
+\rowcolor{white}
+Cascade photovoltaic & &
+3 / 1 & 
+& &
+& &
+& &
+\\*
+\rowcolor{lightgray}
+Buckyball C\textsubscript{60} photovoltaic &
+\multirow{-2}{*}{\enhex{\sffamily \large{C}}} &
+2 / 3 &
+\multirow{-2}{*}{\large{\encircle{e}}} & &
+\multirow{-2}{*}{\large{$+$\faSunO}}$+1$ & &
+& &
+\\
+
+\midrule
+\rowcolor{white}
+Ericsson engine & &
+1 / 5 & 
+& &
+& &
+& & 1
+\\*
+\rowcolor{lightgray}
+Nanocomposite thermoelectric &
+\multirow{-2}{*}{\enhex{\sffamily \large{C}}} &
+1 / 5 &
+\multirow{-2}{*}{\large{\encircle{e}}} & &
+$+1$ & &
+\multirow{-2}{*}{\large{(any)}} & &
+\\
+
+\midrule
+\rowcolor{white}
+H\textsubscript{2}--O\textsubscript{2} fuel cell & &
+4 / 4 & 
+& &
+& &
+& &
+\\*
+\rowcolor{lightgray}
+Microbial fuel cell &
+\multirow{-2}{*}{\enhex{\sffamily \large{C}}} &
+2 / 5 &
+\multirow{-2}{*}{\large{\encircle{e}}} & \pulsegen{0.3}&
+\multirow{-2}{*}{\large{$+$\faSunO}} $+1$ & &
+& &
+\\
+
+\midrule
+\rowcolor{white}
+Stirling engine & &
+3 / 5 & 
+& &
+& &
+& & 1
+\\*
+\rowcolor{lightgray}
+Thermophotovoltaic &
+\multirow{-2}{*}{\enhex{\sffamily \large{C}}} &
+2 / 4 &
+\multirow{-2}{*}{\large{\encircle{e}}} & &
+\multirow{-2}{*}{\large{$+$\faSunO}} $+1$ & &
+& &
+\\
+
+\midrule
+\rowcolor{white}
+Catalyzed fusion scintillator & &
+0 / 8 & 
+& &
+& &
+\encircle{x}& & 1
+\\*
+\rowcolor{lightgray}
+Diamonoid electrodynamic tether &
+\multirow{-2}{*}{\enhex{\sffamily \large{D}}} &
+2 / 4 &
+\multirow{-2}{*}{\large{\encircle{e}}} & \multirow{-2}{*}{\pulsegen{0.5}}&
+& &
+& &
+\\
+
+\midrule
+\rowcolor{white}
+Rankine solar dynamic & &
+2 / 4 & 
+& &
+$+$\faSunO& &
+& & 1
+\\*
+\rowcolor{lightgray}
+Rankine multiphase &
+\multirow{-2}{*}{\enhex{\sffamily \large{D}}} &
+0 / 4 &
+\multirow{-2}{*}{\large{\encircle{e}}} & \pulsegen{0.3}&
+& &
+(any)& &
+\\
+
+\midrule
+\rowcolor{white}
+Flywheel compulsator & &
+4 / 4 & 
+& &
+$+$\faSunO& &
+& &
+\\*
+\rowcolor{lightgray}
+Superconducting adductor &
+\multirow{-2}{*}{\enhex{\sffamily \large{M}}} &
+1 / 4 &
+\multirow{-2}{*}{\large{\encircle{e}}} & \multirow{-2}{*}{\pulsegen{0.5}}&
+& &
+& &
+\\
+
+\midrule
+\rowcolor{white}
+Marx capacitor bank & &
+1 / 6 & 
+& &
+& &
+& &
+\\*
+\rowcolor{lightgray}
+Casimir battery &
+\multirow{-2}{*}{\enhex{\sffamily \large{M}}} &
+0 / 3 &
+& \multirow{-2}{*}{\pulsegen{0.5}}&
+$+1$ & &
+& \multirow{-2}{*}{\large{\encircle{e}}} &
+\\
+
+\midrule
+\rowcolor{white}
+Radioisotope Stirling & &
+3 / 4 & 
+& &
+$- 2$ & & 
+& &
+\\*
+\rowcolor{lightgray}
+Triggered decay nuclear battery &
+\multirow{-2}{*}{\enhex{\sffamily \large{M}}} &
+1 / 6 &
+\multirow{-2}{*}{\large{\encircle{e}}}& \pulsegen{0.3}&
+$- 1$ & &
+& &
+\\
+
+\midrule
+\rowcolor{white}
+Rankine MHD & &
+0 / 4 & 
+& &
+& &
+\encircle{n} or \faBomb& & 2
+\\*
+\rowcolor{lightgray}
+MHD open-cycle &
+\multirow{-2}{*}{\enhex{\sffamily \large{M}}} &
+0 / 4 &
+\multirow{-2}{*}{\large{\encircle{e}}}& \pulsegen{0.3}&
+$+1$ & &
+\faBomb& &
+\\
+
+\midrule
+\rowcolor{white}
+In-core thermionic & &
+0 / 6 & 
+& &
+& &
+\encircle{n} or \faBomb& & 3
+\\*
+\rowcolor{lightgray}
+Z-pinch microfission &
+\multirow{-2}{*}{\enhex{\sffamily \large{S}}} &
+2 / 5 &
+\multirow{-2}{*}{\large{\encircle{e}}}& \multirow{-2}{*}{\pulsegen{0.5}}&
+$+4$ & &
+& & 1
+\\
+
+\midrule
+\rowcolor{white}
+Magnetoshell plasma parachute & &
+0 / 5 & 
+& &
+$+$\faSunO$- 2$& &
+& &
+\\*
+\multicolumn{10}{r}{\small{\parbox{6cm}{Can’t be used to support Bernals or during industrialization. This stack enters aerobrakes safely.}}}
+\\*
+\rowcolor{lightgray}
+Granular rainbow corral &
+\multirow{-2}{*}{\enhex{\sffamily \large{S}}} &
+0 / 5 &
+\multirow{-2}{*}{\large{\encircle{e}}}& &
+$+$\faSunO& &
+& &
+\\*
+\rowcolor{lightgray}
+& \multicolumn{9}{r}{\parbox{6cm}{\small{Can’t be used to support Bernals or during industrialization. This stack enters aerobrakes safely.}}}
+\\
+
+\midrule
+\rowcolor{white}
+Cascade thermoacoustic & &
+0 / 5 & 
+& &
+& &
+\encircle{n}& & 2
+\\*
+\rowcolor{lightgray}
+Dusty plasma MHD &
+\multirow{-2}{*}{\enhex{\sffamily \large{V}}} &
+1 / 6 &
+\multirow{-2}{*}{\large{\encircle{e}}}&&
+& &
+& & 
+\\
+
+\midrule
+\rowcolor{white}
+Photon tether rectenna & &
+2 / 2 & 
+& &
+$+$\faSunO$-1$& &
+& &
+\\*
+\rowcolor{lightgray}
+Palmer LSP aerosol lens &
+\multirow{-2}{*}{\enhex{\sffamily \large{V}}} &
+0 / 5 &
+\multirow{-2}{*}{\large{\encircle{e}}}&&
+$+$\faSunO$+1$& &
+& & 
+\\
+\end{longtable}

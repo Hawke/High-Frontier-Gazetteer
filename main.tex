@@ -1,0 +1,201 @@
+\documentclass[a4paper,table,fontsize=8pt,DIV=6,enabledeprecatedfontcommands]{scrbook}
+\recalctypearea
+
+\usepackage[a4paper,twoside]{geometry}
+
+\usepackage{fontspec}
+\usepackage{fontawesome}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+
+\usetikzlibrary{shapes}
+\usepackage{circuitikz}
+
+\usepackage{booktabs,tabularx,makecell,ltxtable,caption,lscape,needspace}
+
+%%\let\savedegree\degree
+%%\let\degree\relax
+\usepackage{mathabx}
+%%\let\degree\savedegree
+
+\usepackage{starfont}
+\newcommand{\showboth}[1]{\starfontsans #1 & \starfontserif #1}
+
+\renewcommand{\thefootnote}{\fnsymbol{footnote}}
+
+\usepackage{graphicx}
+
+\setlength{\LTleft}{0pt}
+\usepackage{multirow}
+\usepackage{xfrac}
+\usepackage{xfrac}
+%%\usepackage{amssymb}
+
+\definecolor{pastelgreen}{rgb}{0.47, 0.87, 0.47}
+\definecolor{kellygreen}{rgb}{0.3, 0.73, 0.09}
+\definecolor{pastelorange}{rgb}{1.0, 0.7, 0.28}
+\definecolor{darkorange}{rgb}{1.0, 0.55, 0.0}
+\definecolor{lightpastelpurple}{rgb}{0.69, 0.61, 0.85}
+\definecolor{darkpastelpurple}{rgb}{0.59, 0.44, 0.84}
+\definecolor{pastelred}{rgb}{1.0, 0.41, 0.38}
+\definecolor{darkpastelred}{rgb}{0.76, 0.23, 0.13}
+\definecolor{ferrarired}{rgb}{1.0, 0.11, 0.0}
+\definecolor{ghostwhite}{rgb}{0.97, 0.97, 1.0}
+\definecolor{lightgray}{rgb}{0.83, 0.83, 0.83}
+
+%%\setmainfont[Ligatures=TeX]{TeX Gyre Pagella}
+\setsansfont{Fira Sans}
+\setmonofont{Inconsolata}
+
+\usepackage[os=mac]{menukeys}
+\renewmenumacro{\keys}[+]{shadowedroundedkeys}
+\renewmenumacro{\menu}[>]{angularmenus}
+
+\makeatletter
+%%\renewcommand{\maketitle}{{\centering\sffamily{\LARGE\bfseries\@title}\par\vskip\baselineskip{\large\@date}\par}\vskip3\baselineskip}
+% nifty commands by Paul Gaborit from http://tex.stackexchange.com/a/236891/226
+\def\setmenukeyswin{\def\tw@mk@os{win}}
+\def\setmenukeysmac{\def\tw@mk@os{mac}}
+\makeatother
+
+\newcommand\enhex[1]{%
+    \tikz[baseline=(X.base)]
+    \node (X) [draw, regular polygon, regular polygon sides=6] {\strut #1};}
+
+\newcommand\enhexsmall[1]{%
+    \tikz[baseline=(X.base)]
+    \node (X) [draw, regular polygon, regular polygon sides=6] {#1};}
+
+\newcommand\encircle[1]{%
+    \tikz[baseline=(X.base)]
+    \node (X) [draw, shape=circle, inner sep=0] {\strut \sffamily{#1}};}
+
+\newcommand\pulsegen[1]{%
+\begin{circuitikz}[scale=#1,transform shape]
+  \draw (0,0) 
+        to [C] (1,0); 
+\end{circuitikz}
+}
+    
+
+\title{High Frontier Gazetteer}
+\author{Alex Mauer}
+\date{2018-10-09}
+
+\begin{document}
+
+\maketitle
+
+\section{Cards}
+\subsection{Crew}
+\renewcommand{\arraystretch}{1.25}
+\LTXtable{\textwidth}{crew}
+
+\subsection{Thrusters}
+\LTXtable{\textwidth}{thrusters}
+
+\newgeometry{left=3cm}
+\subsection{Robonauts}
+\LTXtable{\textwidth}{robonauts}
+\restoregeometry
+
+\subsection{Refineries}
+\LTXtable{\textwidth}{refineries}
+
+\subsection{Generators}
+\LTXtable{\textwidth}{generators}
+
+\subsection{Reactors}
+\LTXtable{\textwidth}{reactors}
+
+\subsection{Radiators}
+\LTXtable{\textwidth}{radiators}
+
+\section{Sites}
+
+\subsection{ISRU 4}
+
+All sites which can be prospected with an ISRU-4 robonaut
+\subsubsection{Type C}
+\LTXtable{\textwidth}{4hydrationC}
+\needspace{4\baselineskip}
+\subsubsection{Type D}
+\LTXtable{\textwidth}{4hydrationD}
+\subsubsection{Type M}
+\LTXtable{\textwidth}{4hydrationM}
+\subsubsection{Type S}
+\LTXtable{\textwidth}{4hydrationS}
+\subsubsection{Type V}
+\LTXtable{\textwidth}{4hydrationV}
+
+\subsection{ISRU 3}
+All sites which can be prospected with an ISRU-3 robonaut
+\subsubsection{Type C}
+\LTXtable{\textwidth}{3hydrationC}
+\pagebreak
+\subsubsection{Type D}
+\LTXtable{\textwidth}{3hydrationD}
+\subsubsection{Type M}
+\LTXtable{\textwidth}{3hydrationM}
+\needspace{4\baselineskip}
+\subsubsection{Type S}
+\LTXtable{\textwidth}{3hydrationS}
+\subsubsection{Type V}
+\LTXtable{\textwidth}{3hydrationV}
+
+\subsection{ISRU 2}
+All sites which can be prospected with an ISRU-2 robonaut
+\subsubsection{Type C}
+\LTXtable{\textwidth}{2hydrationC}
+\subsubsection{Type D}
+\LTXtable{\textwidth}{2hydrationD}
+\subsubsection{Type M}
+Any M site which can be prospected at ISRU-2 may also be prospected at ISRU-3.
+\LTXtable{\textwidth}{2hydrationM}
+\subsubsection{Type S}
+\LTXtable{\textwidth}{2hydrationS}
+\subsubsection{Type V}
+\LTXtable{\textwidth}{2hydrationV}
+
+\pagebreak
+\subsection{ISRU 1}
+All sites which can be prospected with an ISRU-1 robonaut
+\subsubsection{Type C}
+\LTXtable{\textwidth}{1hydrationC}
+\pagebreak
+\subsubsection{Type D}
+Any D site which can be prospected at ISRU-1 may also be prospected at ISRU-2.
+\LTXtable{\textwidth}{1hydrationD}
+\subsubsection{Type M}
+\LTXtable{\textwidth}{1hydrationM}
+\needspace{4\baselineskip}
+\subsubsection{Type S}
+\LTXtable{\textwidth}{1hydrationS}
+\needspace{4\baselineskip}
+\subsubsection{Type V}
+\LTXtable{\textwidth}{1hydrationV}
+
+\subsection{ISRU 0}
+All sites which can be prospected with an ISRU-0 (or less) robonaut
+\subsubsection{Type C}
+\LTXtable{\textwidth}{0hydrationC}
+\subsubsection{Type D}
+Any D site which can be prospected at ISRU-0 may also be prospected at ISRU-1 or ISRU-2.
+\LTXtable{\textwidth}{0hydrationD}
+\subsubsection{Type M}
+\LTXtable{\textwidth}{0hydrationM}
+\needspace{4\baselineskip}
+\subsubsection{Type S}
+\LTXtable{\textwidth}{0hydrationS}
+\subsubsection{Type V}
+Any V site which can be prospected at ISRU-0 may also be prospected at ISRU-1.
+\LTXtable{\textwidth}{0hydrationV}
+
+\subsection{Special features}
+\subsubsection{Atmosphere}
+There are eight Atmospheric sites which work with the card \textit{Ionosphere lasing} and may allow an ISRU scoop operation
+\LTXtable{\textwidth}{atmospheric}
+
+\end{document}
